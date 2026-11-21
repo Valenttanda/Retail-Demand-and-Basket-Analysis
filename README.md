@@ -40,7 +40,7 @@ An end-to-end data science portfolio project analyzing historical wholesale and 
 | **Random Forest** | **9,155.92** | **5,824.65** | **9,576.73** | **29.34%** | **0.5051** |
 | Ridge Regression | 9,532.62 | 6,510.56 | 9,868.37 | 32.79% | 0.4745 |
 | Seasonal Naive (`lag_7`) | - | 6,403.95 | 10,091.25 | 32.26% | 0.4505 |
-| Gradient Boosting | 10,194.57 | 6,345.14 | 10,316.22 | 31.96% | 0.4257 |
+| Gradient Boosting | 10,640.21  | 6,416.31  | 11,204.06 | 32.32% | 0.3226 |
 | SARIMAX (`s=7`) | - | 8,484.69 | 12,804.98 | 42.74% | 0.1152 |
 
 #### Weekly Forecast (Holdout Test Set)
@@ -49,7 +49,7 @@ An end-to-end data science portfolio project analyzing historical wholesale and 
 | **Seasonal Naive (`lag_1`)** | - | **23,724.14** | **33,110.12** | **17.28%** | **0.2811** |
 | Ridge Regression | 38,112.01 | 27,397.46 | 36,126.75 | 19.96% | 0.1441 |
 | Random Forest | 35,462.19 | 30,198.11 | 40,534.86 | 22.00% | -0.0775 |
-| Gradient Boosting | 40,169.24 | 30,963.68 | 42,454.84 | 22.55% | -0.1820 |
+| Gradient Boosting | 44,643.31 | 36,912.07 | 45,958.75 | 26.89% | -0.3851 |
 | SARIMAX (`s=4`) | - | 58,915.82 | 71,700.55 | 42.91% | -2.3713 |
 
 * **Insight:** **Random Forest** excels at daily forecasting by capturing weekly lag cycles and Saturday closures without overfitting (`CV RMSE: 9,155.92` vs. `Test RMSE: 9,576.73`). At the weekly level, aggregation reduces relative forecast error (`wMAPE`) from `29.34%` down to `17.28%`, where simpler autoregressive baselines (`lag_1`) and linear models outperform tree-based models due to the limited ~80-week training sample and Q4 extrapolation dynamics.
